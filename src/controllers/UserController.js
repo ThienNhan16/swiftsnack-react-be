@@ -57,7 +57,8 @@ const loginUser = async (req, res) => {
         return res.status(200).json(...newReponse, refresh_token)
     } catch (e) {
         return res.status(404).json({
-            message: e
+            status: 'ERR'
+            message: 'ERR' + e
         })
     }
 }
